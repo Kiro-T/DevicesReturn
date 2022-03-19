@@ -1,0 +1,115 @@
+﻿@page
+@model SmartDevicesReturn.Pages.DeviceReturn.IndexModel
+
+
+
+ <div class="container pt-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Smart Device Return</h2>
+         </div>
+
+        <div class="col-md">
+            <a asp-page="create" class="btn btn-success">
+                <i class="bi bi-person-plus-fill"></i>&nbsp;Create New Smart Device Return
+            </a>
+        </div>
+    </div>
+
+    <br /> <br />
+    <table class="table table-bordered table-striped table-responsive-lg" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Accepted By
+                </th>
+                <th>
+                    Date received
+                </th>
+                <th>
+                    User Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Ticket No.
+                </th>
+                <th>   
+                    Service Category
+                </th>
+                <th>
+                    Device Type
+                </th>
+                <th> 
+                    Device IMEI/DAMS/Serial No.
+                </th>
+                <th>
+                    Phone/SIM No.
+                </th>
+                <th style="width:50%">
+                    Description
+                </th>
+                <th>
+                    Action Required
+                </th>
+                <th>
+                    Device Status
+                </th>
+                <th>
+                    Stock
+                </th>
+                <th>
+                    Collection
+                </th>
+                <th>
+                    Posted
+                </th>
+                <th>
+                    Date Actioned
+                </th>
+                <th></th>
+            </tr>
+
+        </thead>
+        
+        <tbody>
+            @foreach(var obj in Model.CategoryReturn)
+            {
+            <tr>
+                <td width="30%">@obj.Id</td>
+                <td width="30%">@obj.acceptedBy</td>
+                <td width="30%">@obj.dateReceived</td>
+                <td width="30%">@obj.userName</td>
+                <td width="30%">@obj.email</td>
+                <td width="30%">@obj.ticketNo</td>
+                <td width="30%">@obj.serviceCategory</td>
+                <td width="30%">@obj.deviceType</td>
+                <td width="30%">@obj.deviceId</td>
+                <td width="30%">@obj.phoneNo</td>
+                <td width="30%">@obj.faultDescription</td>
+                <td width="30%">@obj.actionRequired</td>
+                <td width="30%">@obj.deviceStatus</td>
+                <td width="30%">@obj.Stock</td>
+                <td width="30%">@obj.Collection</td>
+                <td width="30%">@obj.Post</td>
+                <td width="30%">@obj.dateActioned</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                    <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                    <i class="bi bi-pencil-fill"></i>
+                    </a>
+                    <a asp-page="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+                    <i class="bi bi-trash3-fill"></i>
+                    </a>
+                    </div>
+                </td>
+            </tr>
+            }
+         
+        </tbody>
+    </table>
+   </div>

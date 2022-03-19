@@ -1,0 +1,103 @@
+﻿@page
+@model SmartDevicesReturn.Pages.DeviceReturn.EditModel
+
+<form method="post">
+    <input hidden asp-for="DeviceCategory.Id" />
+    <div class="border-bottom p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Edit Smart Device Return</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>        
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.acceptedBy"></label>
+            <input asp-for="@Model.DeviceCategory.acceptedBy" class="form-control" />
+            <span asp-validation-for="DeviceCategory.acceptedBy" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.dateReceived"></label>
+            <input asp-for="@Model.DeviceCategory.dateReceived" class="form-control" />
+            <span asp-validation-for="DeviceCategory.dateReceived" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.userName"></label>
+            <input asp-for="@Model.DeviceCategory.userName" class="form-control" />
+            <span asp-validation-for="DeviceCategory.userName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.email"></label>
+            <input asp-for="@Model.DeviceCategory.email" class="form-control" />
+            <span asp-validation-for="DeviceCategory.email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.ticketNo"></label>
+            <input asp-for="@Model.DeviceCategory.ticketNo" class="form-control" />
+            <span asp-validation-for="DeviceCategory.ticketNo" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.serviceCategory"></label>
+            <input asp-for="@Model.DeviceCategory.serviceCategory" class="form-control" />
+            <span asp-validation-for="DeviceCategory.serviceCategory" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.deviceType"></label>
+            <input asp-for="@Model.DeviceCategory.deviceType" class="form-control" />
+            <span asp-validation-for="DeviceCategory.deviceType" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.deviceId"></label>
+            <input asp-for="@Model.DeviceCategory.deviceId" class="form-control" />
+            <span asp-validation-for="DeviceCategory.deviceId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.phoneNo"></label>
+            <input asp-for="@Model.DeviceCategory.phoneNo" class="form-control" />
+            <span asp-validation-for="DeviceCategory.phoneNo" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            Description:
+            <label asp-for="DeviceCategory.faultDescription"></label>
+            <input asp-for="@Model.DeviceCategory.faultDescription" class="form-control" />
+            <span asp-validation-for="DeviceCategory.faultDescription" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.actionRequired"></label>
+            <input asp-for="@Model.DeviceCategory.actionRequired" class="form-control" />
+            <span asp-validation-for="DeviceCategory.actionRequired" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.deviceStatus"></label>
+            <input asp-for="@Model.DeviceCategory.deviceStatus" class="form-control" />
+            <span asp-validation-for="DeviceCategory.deviceStatus" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.Stock"></label>
+            <input asp-for="@Model.DeviceCategory.Stock" />
+            <span asp-validation-for="DeviceCategory.Stock" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.Collection"></label>
+            <input asp-for="@Model.DeviceCategory.Collection" />
+            <span asp-validation-for="DeviceCategory.Collection" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.Post"></label>
+            <input asp-for="@Model.DeviceCategory.Post" />
+            <span asp-validation-for="DeviceCategory.Post" class="text-danger"></span>
+        </div>
+            <div class="mb-3">
+            <label asp-for="DeviceCategory.dateActioned"></label>
+            <input asp-for="@Model.DeviceCategory.dateActioned" class="form-control" />  
+            <span asp-validation-for="DeviceCategory.dateActioned" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success" style="width:150px;">Update</button>
+        <a asp-page="Index" class="btn btn-info" style="width:150px;">Back to List</a>
+        </div>
+    
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}
