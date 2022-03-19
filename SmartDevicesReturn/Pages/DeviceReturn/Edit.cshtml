@@ -85,6 +85,21 @@
             <input asp-for="@Model.DeviceCategory.Post" />
             <span asp-validation-for="DeviceCategory.Post" class="text-danger"></span>
         </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.Repair"></label>
+            <input asp-for="@Model.DeviceCategory.Repair" />
+            <span asp-validation-for="DeviceCategory.Post" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.Replacement"></label>
+            <input asp-for="@Model.DeviceCategory.Replacement" />
+            <span asp-validation-for="DeviceCategory.Post" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DeviceCategory.Disposal"></label>
+            <input asp-for="@Model.DeviceCategory.Disposal" />
+            <span asp-validation-for="DeviceCategory.Post" class="text-danger"></span>
+        </div>
             <div class="mb-3">
             <label asp-for="DeviceCategory.dateActioned"></label>
             <input asp-for="@Model.DeviceCategory.dateActioned" class="form-control" />  

@@ -79,6 +79,18 @@ namespace SmartDevicesReturn.Model
         public bool Post { get; set; }
 
         [Required]
+        [Display(Name = "Repair")]
+        public bool Repair { get; set; }
+
+        [Required]
+        [Display(Name = "Disposal")]
+        public bool Disposal { get; set; }
+
+        [Required]
+        [Display(Name = "Replacement Required")]
+        public bool Replacement { get; set; }
+
+        [Required]
         [Display(Name = "Date Actioned")]
         public DateTime dateActioned { get; set; }
 

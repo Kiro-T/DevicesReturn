@@ -3,21 +3,23 @@
 
 
 
- <div class="container pt-3">
+ <div class="container pt-3" >
     <div class="row pt-4">
         <div class="col-6">
             <h2 class="text-primary">Smart Device Return</h2>
          </div>
 
-        <div class="col-md">
+         <br /> <br /> <br /> <br />
+
+        <div>
             <a asp-page="create" class="btn btn-success">
-                <i class="bi bi-person-plus-fill"></i>&nbsp;Create New Smart Device Return
+                <i class="bi bi-plus-circle"></i>&nbsp;Create New Smart Device Return
             </a>
         </div>
     </div>
 
     <br /> <br />
-    <table class="table table-bordered table-striped table-responsive-lg" style="width:100%">
+    <table class="table table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
                 <th>
@@ -50,7 +52,7 @@
                 <th>
                     Phone/SIM No.
                 </th>
-                <th style="width:50%">
+                <th>
                     Description
                 </th>
                 <th>
@@ -69,9 +71,18 @@
                     Posted
                 </th>
                 <th>
+                    Repair
+                </th>
+                <th>
+                    Replacement Required
+                </th>
+                <th>
+                    Disposal
+                </th>
+                <th>
                     Date Actioned
                 </th>
-                <th></th>
+            
             </tr>
 
         </thead>
@@ -80,23 +91,26 @@
             @foreach(var obj in Model.CategoryReturn)
             {
             <tr>
-                <td width="30%">@obj.Id</td>
-                <td width="30%">@obj.acceptedBy</td>
-                <td width="30%">@obj.dateReceived</td>
-                <td width="30%">@obj.userName</td>
-                <td width="30%">@obj.email</td>
-                <td width="30%">@obj.ticketNo</td>
-                <td width="30%">@obj.serviceCategory</td>
-                <td width="30%">@obj.deviceType</td>
-                <td width="30%">@obj.deviceId</td>
-                <td width="30%">@obj.phoneNo</td>
-                <td width="30%">@obj.faultDescription</td>
-                <td width="30%">@obj.actionRequired</td>
-                <td width="30%">@obj.deviceStatus</td>
-                <td width="30%">@obj.Stock</td>
-                <td width="30%">@obj.Collection</td>
-                <td width="30%">@obj.Post</td>
-                <td width="30%">@obj.dateActioned</td>
+                <td width="100%">@obj.Id</td>
+                <td width="100%">@obj.acceptedBy</td>
+                <td width="100%">@obj.dateReceived</td>
+                <td width="100%">@obj.userName</td>
+                <td width="100%">@obj.email</td>
+                <td width="100%">@obj.ticketNo</td>
+                <td width="100%">@obj.serviceCategory</td>
+                <td width="100%">@obj.deviceType</td>
+                <td width="100%">@obj.deviceId</td>
+                <td width="100%">@obj.phoneNo</td>
+                <td width="100%">@obj.faultDescription</td>
+                <td width="100%">@obj.actionRequired</td>
+                <td width="100%">@obj.deviceStatus</td>
+                <td width="100%">@obj.Stock</td>
+                <td width="100%">@obj.Collection</td>
+                <td width="100%">@obj.Post</td>
+                <td width="100%">@obj.Repair</td>
+                <td width="100%">@obj.Replacement</td>
+                <td width="100%">@obj.Disposal</td>
+                <td width="100%">@obj.dateActioned</td>
                 <td>
                     <div class="w-75 btn-group" role="group">
                     <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
@@ -113,3 +127,4 @@
         </tbody>
     </table>
    </div>
+   
